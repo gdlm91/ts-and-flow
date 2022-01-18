@@ -1,6 +1,7 @@
 [ignore]
 <PROJECT_ROOT>/node_modules
 <PROJECT_ROOT>/webpack.config.js
+<PROJECT_ROOT>/.babelrc.js
 <PROJECT_ROOT>/dist
 
 [include]
@@ -16,5 +17,8 @@ module.file_ext=.js
 module.file_ext=.jsx
 module.file_ext=.scss
 module.name_mapper.extension='scss' -> 'empty/object'
+# This is needed for Flow runtime to be able to resolve TS(X) files
+module.file_ext=.ts
+module.file_ext=.tsx
 
 [strict]

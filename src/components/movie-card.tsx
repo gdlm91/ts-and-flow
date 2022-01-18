@@ -1,5 +1,3 @@
-// @flow
-
 import * as React from "react";
 import { Link } from "react-router-dom";
 import { Card } from "react-bootstrap";
@@ -13,7 +11,7 @@ type Props = {
 };
 
 // FIXME: how is this type going to be fixed by the flow-to-ts tool?
-export const MovieCard: React$StatelessFunctionalComponent<Props> = ({
+export const MovieCard: React.FC<Props> = ({
   movie,
 }) => {
   return (
