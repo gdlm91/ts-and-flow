@@ -1,10 +1,12 @@
+// @flow
+
 import * as React from "react";
 import { useParams } from "react-router-dom";
 
 import { MovieDescription } from "../components/movie-description";
 import { useMovieApi } from "../hooks/useMovieApi";
 
-const MoviePage = () => {
+const MoviePage: React$StatelessFunctionalComponent<any> = () => {
   const { movie, getMovie } = useMovieApi();
 
   const { id } = useParams();

@@ -1,3 +1,5 @@
+// @flow
+
 import * as React from "react";
 import { Link, Route, Routes } from "react-router-dom";
 
@@ -7,7 +9,7 @@ import HomePage from "./pages/home";
 import MoviePage from "./pages/movie";
 import logo from "../src/logo.png";
 
-function App() {
+const App: React$StatelessFunctionalComponent<any> = () => {
   return (
     <div className="app">
       <div className="logo">
@@ -21,6 +23,6 @@ function App() {
       </Routes>
     </div>
   );
-}
+};
 
 export default App;

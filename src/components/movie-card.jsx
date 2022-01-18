@@ -1,10 +1,21 @@
+// @flow
+
 import * as React from "react";
 import { Link } from "react-router-dom";
 import { Card } from "react-bootstrap";
 
+import type { MovieSearchResult } from "../shared/types-flow";
+
 import "./movie-card.scss";
 
-export const MovieCard = ({ movie }) => {
+type Props = {
+  movie: MovieSearchResult,
+};
+
+// FIXME: how is this type going to be fixed by the flow-to-ts tool?
+export const MovieCard: React$StatelessFunctionalComponent<Props> = ({
+  movie,
+}) => {
   return (
     <Card key={movie.imdbID} className="card">
       <Card.Img className="card-img" variant="top" src={movie.Poster} />

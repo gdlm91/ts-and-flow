@@ -1,0 +1,4 @@
+{
+  //https://github.com/flowtype/flow-for-vscode#setup
+  "javascript.validate.enable": false
+}

@@ -1,3 +1,5 @@
+// @flow
+
 import * as React from "react";
 import { Badge } from "react-bootstrap";
 import { FcFilmReel } from "react-icons/fc";
@@ -5,9 +7,17 @@ import { BsDot } from "react-icons/bs";
 import { FaTheaterMasks } from "react-icons/fa";
 import { AiFillTrophy } from "react-icons/ai";
 
+import type { Movie } from "../shared/types-flow";
+
 import "./movie-description.scss";
 
-export const MovieDescription = ({ movie }) => {
+type Props = {
+  movie: Movie,
+};
+
+export const MovieDescription: React$StatelessFunctionalComponent<Props> = ({
+  movie,
+}) => {
   const actorsSplit = movie?.Actors.split(",");
   return (
     <>
