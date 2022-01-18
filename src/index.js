@@ -1,8 +1,14 @@
-import React from "react";
+import * as React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
+
+import "./index.scss";
 
 import App from "./App";
 
-const title = "React with Webpack, Flow and Babel";
-
-ReactDOM.render(<App title={title} />, document.getElementById("app"));
+ReactDOM.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  document.getElementById("app")
+);
